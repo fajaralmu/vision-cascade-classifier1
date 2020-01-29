@@ -21,7 +21,7 @@ int App::run()
 	//initWindowDialogs(); 
 
 	cv::CascadeClassifier cascade;
-	if (!cascade.load("classifier/cascades_face/haarcascade_mcs_nose.xml")) {
+	if (!cascade.load("classifier/classifier_stop/cascade.xml")) {
 		std::cout << "Error when loading the cascade classfier!"
 			<< std::endl;
 		return -1;
@@ -35,7 +35,7 @@ int App::run()
 		rgbPicture = mainPicture;
 
 		/*mirror*/
-		cv::flip(mainPicture, mainPicture, 2); 
+	//	cv::flip(mainPicture, mainPicture, 2); 
 		std::vector<cv::Rect> detections;
 
 		cascade.detectMultiScale(mainPicture, // input image
@@ -45,9 +45,14 @@ int App::run()
 			0, // flags (not used)
 			cv::Size(48, 48), // minimum object size to be detected
 			cv::Size(128, 128)); // maximum object size to be detected
+
+		std::cout << "DETECTION SIZE:" << detections.size() << std::endl;
+
 		for (int i = 0; i < detections.size(); i++)
 			cv::rectangle(rgbPicture, detections[i],
 				cv::Scalar(255, 255, 255), 2);
+
+
 		imshow(ORIGINAL_WINDOW, rgbPicture);
 		 
 
