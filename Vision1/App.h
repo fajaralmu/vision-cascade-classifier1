@@ -59,6 +59,7 @@ public:
 
 	 
 	int run(); 
+	int createBg();
 
 };
 
