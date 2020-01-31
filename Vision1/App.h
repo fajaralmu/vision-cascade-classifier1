@@ -60,6 +60,6 @@ public:
 	 
 	int run(); 
 	int createBg();
-
+	int drawDetection(std::vector<cv::Rect> detections, cv::Mat pict, cv::String name, cv::Scalar color);
 };
 

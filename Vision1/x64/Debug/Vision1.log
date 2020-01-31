@@ -1,6 +1,4 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Vision1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Main.cpp
   App.cpp
-  Generating Code...
   Vision1.vcxproj -> D:\Development\Visual Studio 2015 Computer Vision\Vision1 - Cascade Classifier\x64\Debug\CascadeClassifier1.exe
   Vision1.vcxproj -> D:\Development\Visual Studio 2015 Computer Vision\Vision1 - Cascade Classifier\x64\Debug\CascadeClassifier1.pdb (Partial PDB)
